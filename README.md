@@ -6,7 +6,9 @@
 cd infra
 ```
 
-Then, set the PROXMOX_VE_USERNAME and PROXMOX_VE_PASSWORD environment variables.
+First, make sure that the **remote backend** which will hold the Terraform **state** exists by running the ./create-backend-state.ps1 script. This script is written in PowerShell and it will **idempotently** create a storage account container in your Azure subscription for the state. Make sure to pass the parameters accordingly.
+
+Then, set the **PROXMOX_VE_USERNAME** and **PROXMOX_VE_PASSWORD** environment variables.
 
 Using PowerShell:
 

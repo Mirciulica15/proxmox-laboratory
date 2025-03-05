@@ -5,6 +5,13 @@ terraform {
       version = "0.73.0"
     }
   }
+
+  backend "azurerm" {
+    resource_group_name  = "rg-mircea-talu"
+    storage_account_name = "stmirceatalu"
+    container_name       = "terraform"
+    key                  = "proxmox.tfstate"
+  }
 }
 
 provider "proxmox" {
